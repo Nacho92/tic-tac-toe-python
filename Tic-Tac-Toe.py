@@ -100,6 +100,7 @@ def main():
         # Verificar si hay un ganador o empate después de cada turno
         resultado = verificar_victoria(tablero_juego)
         if resultado:
+            print(tablero(tablero_juego))  # Imprimir el tablero después de la victoria
             print(resultado)
             break
 
