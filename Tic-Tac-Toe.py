@@ -103,6 +103,14 @@ def main():
             print(tablero(tablero_juego))  # Imprimir el tablero después de la victoria
             print(resultado)
             break
+        
+         # Preguntar si el jugador desea iniciar una nueva partida
+        jugar_nueva_partida = input("¿Deseas iniciar una nueva partida? (sí/no): ").lower()
+        if jugar_nueva_partida != 'sí':
+            salir = input("¿Deseas salir? (sí/no): ").lower()
+            if salir == 'sí':
+                print("¡Gracias por jugar!")
+                break
 
 if __name__ == "__main__":
     main()
