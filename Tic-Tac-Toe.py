@@ -36,16 +36,16 @@ def verificar_victoria(tablero):
     for i in range(3):
         # Verificamos filas
         if tablero[i][0] == tablero[i][1] == tablero[i][2] and tablero[i][0] != ' ':
-            return f"Jugador {'2' if tablero[i][0] == 'X' else '1'} Ha Ganado!"
+            return f"Jugador {'1' if tablero[i][0] == 'X' else '2'} Ha Ganado!"  # Corrige la asignación del jugador
         # Verificamos columnas
         if tablero[0][i] == tablero[1][i] == tablero[2][i] and tablero[0][i] != ' ':
-            return f"Jugador {'2' if tablero[0][i] == 'X' else '1'} Ha Ganado!"
+            return f"Jugador {'1' if tablero[0][i] == 'X' else '2'} Ha Ganado!"  # Corrige la asignación del jugador
 
     # Verificamos diagonales
     if tablero[0][0] == tablero[1][1] == tablero[2][2] and tablero[0][0] != ' ':
-        return f"Jugador {'2' if tablero[0][0] == 'X' else '1'} Ha Ganado!"
+        return f"Jugador {'1' if tablero[0][0] == 'X' else '2'} Ha Ganado!"  # Corrige la asignación del jugador
     if tablero[2][0] == tablero[1][1] == tablero[0][2] and tablero[2][0] != ' ':
-        return f"Jugador {'2' if tablero[2][0] == 'X' else '1'} Ha Ganado!"
+        return f"Jugador {'1' if tablero[2][0] == 'X' else '2'} Ha Ganado!"  # Corrige la asignación del jugador
 
     # Verificamos si hay empate (ninguna casilla vacía)
     if all(tablero[i][j] != ' ' for i in range(3) for j in range(3)):
